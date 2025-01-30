@@ -1,1 +1,1 @@
-# Gernciador-de-Tarefas-React
+# Gerenciador-de-Tarefas-React
