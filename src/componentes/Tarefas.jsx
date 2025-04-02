@@ -1,4 +1,4 @@
-import { ChevronRightIcon, Trash2Icon } from "lucide-react";
+import { CheckIcon, ChevronRightIcon, Trash2Icon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Button from "./button";
 
@@ -27,7 +27,8 @@ function Tarefas({listaDeTarefas, alterarTarefaConcluida, excluirTarefa}) {
                     <button 
                     
                         onClick={() => alterarTarefaConcluida(tarefa.id)}
-                        className={`bg-slate-400 text-left w-full text-white p-2 rounded-md ${tarefa.isCompleted && "line-through"}`}>
+                        className={`bg-slate-400 text-left flex items-center gap-2 w-full text-white p-2 rounded-md ${tarefa.isCompleted && "line-through"}`}>
+                        {tarefa.isCompleted && <CheckIcon />}
                         {tarefa.title}
                     </button>
 
