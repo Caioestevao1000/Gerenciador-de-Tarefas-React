@@ -1,5 +1,6 @@
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { ChevronLeftIcon} from "lucide-react";
+import Title from "../componentes/title";
 
 function PaginaTarefa() {
     const navigate = useNavigate();
@@ -11,7 +12,7 @@ function PaginaTarefa() {
 
                 <div className="w-500px space-y-4">
                     <div className="flex justify-center relative mb-6">
-                        <h1 className="text-3xl text-slate-100 font-bold text-center pb-2">Detalhes de Tarefas</h1>
+                        <Title>Detalhes de Tarefas</Title>
                         <button onClick={() => navigate(-1)} className=" text-white absolute left-0 top-0 bottom-0"> 
                             <ChevronLeftIcon /> </button>
                     </div>

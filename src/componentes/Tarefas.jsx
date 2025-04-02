@@ -1,5 +1,6 @@
 import { ChevronRightIcon, Trash2Icon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import Button from "./button";
 
 function Tarefas({listaDeTarefas, alterarTarefaConcluida, excluirTarefa}) {
 
@@ -9,7 +10,7 @@ function Tarefas({listaDeTarefas, alterarTarefaConcluida, excluirTarefa}) {
         const query = new URLSearchParams();
         query.set("title", tarefa.title);
         query.set("description", tarefa.description);
-        navigator(`/detalhes-da-tarefa?${query.toString()}`);
+        navigator(`/detalhes-tarefa?${query.toString()}`);
     }
 
 
@@ -26,19 +27,17 @@ function Tarefas({listaDeTarefas, alterarTarefaConcluida, excluirTarefa}) {
                     <button 
                     
                         onClick={() => alterarTarefaConcluida(tarefa.id)}
-                        className={`bg-slate-400 text-left w-full text-white p-2 rounded-md ${tarefa.isCompleted && "line-through"}`}
-                    >
+                        className={`bg-slate-400 text-left w-full text-white p-2 rounded-md ${tarefa.isCompleted && "line-through"}`}>
                         {tarefa.title}
                     </button>
 
-                    <button onClick={() => Detalhes(tarefa)} className="bg-slate-400 p-2 rounded-md text-white"> 
+                    <Button onClick={() => Detalhes(tarefa)} > 
                         <ChevronRightIcon />
-                    </button>
+                    </Button>
 
-                    <button onClick={() => excluirTarefa(tarefa.id)}
-                     className="bg-slate-400 p-2 rounded-md text-white"> 
+                    <Button onClick={() => excluirTarefa(tarefa.id)} > 
                         <Trash2Icon />
-                    </button>
+                    </Button>
 
                 </li>
             ))} 

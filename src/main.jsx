@@ -13,7 +13,7 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/detalhes-da-tarefa",
+    path: "/detalhes-tarefa",
     element: <PaginaTarefa />,
   },
 
