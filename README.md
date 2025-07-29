@@ -5,7 +5,6 @@ Um aplicativo moderno e responsivo para gerenciamento de tarefas desenvolvido co
 ![React](https://img.shields.io/badge/React-18.3.1-61DAFB?logo=react)
 ![Vite](https://img.shields.io/badge/Vite-5.4.1-646CFF?logo=vite)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.10-38B2AC?logo=tailwind-css)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 ## ✨ Funcionalidades
 
